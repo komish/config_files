@@ -1,0 +1,3 @@
+alias git-private-ls="ssh user@gitserverhere 'cd git; ls;'"
+alias git-private-init="ssh user@gitserverhere 'cd git; git init --bare $1'"
+
