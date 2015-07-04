@@ -1,3 +1,9 @@
-alias git-private-ls="ssh user@gitserverhere 'cd git; ls;'"
-alias git-private-init="ssh user@gitserverhere 'cd git; git init --bare $1'"
+#
+# Aliases to assist in working with remote private git servers
+### Variables
+GITSERVER=''
+
+### Aliases
+alias git-private-ls="ssh user@${GITSERVER} 'cd git; ls;'"
+alias git-private-init="ssh user@${GITSERVER} 'cd git; git init --bare $1'"
 
