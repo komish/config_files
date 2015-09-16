@@ -1,4 +1,12 @@
+###
+# Aliases and functions to assist in working with Python Virtual Environments
+###
+VENV_DIR=''     # directory that contains your virtual environments; no trailing slash, use full path
+function venv-activate { PROJECT=$1; source ${VENV_DIR}/${PROJECT}/bin/activate ;}
+alias venv-list='ls ${VENV_DIR}'
 
+
+###
 # Aliases to assist in working with remote private git servers
 ### Variables
 GITUSER=''
