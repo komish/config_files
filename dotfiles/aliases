@@ -1,0 +1,43 @@
+# At some point, this file will be cleaner but for now
+# we're using start/end comment indicators so I don't
+# get all OCD (too late?)
+
+### START General Use Aliases ###
+alias ll='ls -lhG'
+alias ls='ls -hG'
+### END General Use Aliases ###
+
+
+### START Python Virtualenv Helper Functions and Aliases ###
+# Replace "VENV_DIR" variable with the
+# full path to your virtualenvs (no 
+# trailing slash)
+VENV_DIR='/path/to/virtual/envs'
+
+# Function to activate the virtualenvs
+function venv-activate { 
+PROJECT=$1; 
+source ${VENV_DIR}/${PROJECT}/bin/activate;
+}
+
+# Alias to list your virtualenvs
+alias venv-list='ls ${VENV_DIR}'
+### END Python Virtualenv Helper Functions and Aliases ###
+
+
+### START Private Git Repository Helper Aliases ###
+# Replace variables with relevant
+# information regarding your private
+# git server
+GITUSER='username'
+GITSERVER='git.server.com'
+
+# aliases already built to utilize previous
+# variables when set
+alias git-private-ls="ssh ${GITUSER}@${GITSERVER} 'cd git; ls;'"
+alias git-private-init="ssh ${GITUSER}@${GITSERVER} 'cd git; git init --bare $1'"
+### END Private Git Repository Helper Aliases ###
+
+
+### START Custom Aliases ###
+### END Custom Aliases ###
