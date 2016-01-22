@@ -20,8 +20,47 @@ PROJECT=$1;
 source ${VENV_DIR}/${PROJECT}/bin/activate;
 }
 
-# Alias to list your virtualenvs
+# Function to create virtualenvs
+function venv-create {
+PROJECT=$1;
+virtualenv ${VENV_DIR}/${PROJECT}
+}
+
+# Function to create virtualenvs with a python3 binary
+function venv3-create {
+PROJECT=$1;
+virtualenv -p $(which python3) ${VENV_DIR}/${PROJECT}
+}
+
+# Function to remove virtualenvs from within the project directory
+function venv-rm {
+PROJECT=$1
+PROJECT_PATH="$VENV_DIR"/"$PROJECT"
+if [[ "$PROJECT_PATH" == "/" ]]
+  then
+    echo "STOPPING The Project Path is being registered as /. Preventing a potential removal of the root filesystem"
+    return 3
+fi
+
+if [[ -z "$PROJECT_PATH" ]]
+  then
+    echo "ERROR Argument Required"
+    return 2
+else
+  echo -n "Removing $PROJECT_PATH. Are you sure? [y/n]"
+  read CONFIRMATION
+  if [[ "$CONFIRMATION" == "y" ]] || [[ "$CONFIRMATION" == "Y" ]]
+    then
+      rm -ri "$PROJECT_PATH"
+  else
+    echo "Directory Removal Canceled"
+  fi
+fi
+}
+
+# Alias to manipulate the virtualenvs
 alias venv-list='ls ${VENV_DIR}'
+alias venv-cd='cd ${VENV_DIR}'
 ### END Python Virtualenv Helper Functions and Aliases ###
 
 
