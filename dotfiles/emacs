@@ -15,10 +15,10 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; set the font.
-;; TODO(komish): figure out how to move this to a local config
-;; because this might differ per machine.
-(set-default-font "Iosevka Term-16")
+;; adding structuring:
+;; ref https://www.emacswiki.org/emacs/DotEmacsStructuring
+(add-to-list 'load-path "~/.emacs.d/user")
+(load-library "style")
 
 ;; set the todo hierarchy
 (setq org-todo-keywords
