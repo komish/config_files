@@ -32,12 +32,13 @@
 ;; set the todo hierarchy
 (setq org-todo-keywords
   '(
-(sequence "PENDING" "TODO" "WORKING" "DONE")
+(sequence "TODO" "PENDING" "BLOCKED" "WORKING" "DONE")
 ))
 
 (setq org-todo-keyword-faces
       '(("WORKING" . "#E35DBF")
-	("PENDING" . "#d4b45d")))
+	("PENDING" . "#d4b45d")
+	("BLOCKED" . "#fc0303")))
 
 ;; remove splash screen emacs
 (setq inhibit-splash-screen t)
