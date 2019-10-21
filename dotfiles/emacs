@@ -15,6 +15,7 @@
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-enabled-themes (quote (deeper-blue)))
+ '(org-agenda-files (quote ("~/Org/tasklog.org")))
  '(package-selected-packages (quote (org-bullets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -57,3 +58,12 @@
 
 ;; track done time
 (setq org-log-done 'time)
+
+;; shortcut to store a link
+(define-key global-map "\C-cl" 'org-store-link)
+
+;; shortcut to org-agenda
+(define-key global-map "\C-ca" 'org-agenda)
+
+;; enable agenda files
+(setq org-agenda-files (list "~/Org/tasklog.org"))
