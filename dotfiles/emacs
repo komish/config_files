@@ -29,6 +29,7 @@
 ;; ref https://www.emacswiki.org/emacs/DotEmacsStructuring
 (add-to-list 'load-path "~/.emacs.d/user")
 (load-library "style")
+(load-library "private")
 
 ;; set the todo hierarchy
 (setq org-todo-keywords
@@ -64,6 +65,3 @@
 
 ;; shortcut to org-agenda
 (define-key global-map "\C-ca" 'org-agenda)
-
-;; enable agenda files
-(setq org-agenda-files (list "~/Org/tasklog.org"))
