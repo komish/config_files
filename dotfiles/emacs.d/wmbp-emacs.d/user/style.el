@@ -1,5 +1,5 @@
 ;; configure font
-(set-default-font "Iosevka Term-15")
+(set-default-font "Source Code Pro-15")
 
 ;; configure org levels
 (custom-set-faces
