@@ -14,9 +14,10 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(custom-enabled-themes (quote (misterioso)))
  '(global-visual-line-mode t)
  '(org-agenda-files nil)
+ '(org-log-into-drawer t)
  '(package-selected-packages (quote (org-bullets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -59,6 +60,9 @@
 
 ;; Scroll line by line
 (setq scroll-step 1)
+
+;; Log Rescheduled Tasks
+(setq org-log-reschedule (quote time))
 
 ;; track done time
 (setq org-log-done 'time)
@@ -114,3 +118,22 @@ TAG is chosen interactively from the global tags completion table."
 
 ;; set above to normal set-tags keybind
 (define-key global-map "\C-cc" 'air-org-set-tags)
+
+;; archive to an archive directory
+(setq org-archive-location "archives/%s_archive::")
+
+;; open logbook for this day
+(defun open-log-file ()
+  (interactive)
+  (let ((default-directory "~/Org/"))
+    (find-file (concat "devlogs/" (format-time-string "%Y-%m-%d") ".org"))))
+
+(define-key global-map "\C-co" 'open-log-file)
+
+;; open meeting for this day
+(defun open-meeting-file ()
+  (interactive)
+  (let ((default-directory "~/Org/"))
+    (find-file (concat "meetings/" "meeting-" (format-time-string "%Y-%m-%d") ".org"))))
+
+(define-key global-map "\C-cm" 'open-meeting-file)
