@@ -17,6 +17,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(global-visual-line-mode t)
  '(org-agenda-files nil)
+ '(org-agenda-skip-scheduled-if-done t)
  '(org-log-into-drawer t)
  '(package-selected-packages (quote (org-bullets))))
 (custom-set-faces
@@ -36,7 +37,7 @@
 ;; set the todo hierarchy
 (setq org-todo-keywords
   '(
-(sequence "TODO" "PENDING" "BLOCKED" "WORKING" "FOLLOWUP" "|" "DONE" "CANCELED")
+(sequence "TODO" "PENDING" "BLOCKED" "WORKING" "FOLLOWUP" "|" "DONE" "RESCHEDULED" "CANCELED")
 ))
 
 (setq org-todo-keyword-faces
@@ -44,6 +45,7 @@
 	("PENDING" . "#d4b45d")
 	("BLOCKED" . "#fc0303")
 	("CANCELED" . "#8a7870")
+	("RESCHEDULED" . "#8a7870")
 	("FOLLOWUP" . "#ffff00")))
 
 ;; remove splash screen emacs
