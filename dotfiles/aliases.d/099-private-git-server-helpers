@@ -1,0 +1,18 @@
+#####
+##### Private Git Server Helpers
+#####
+# Doc:
+#    Helper commands to browse an ssh-only remote git server.
+# Allows you to view repositories, via ssh, on the remote. Exposed commands:
+# - git-private-ls   : lists directories on the remote
+# - git-private-init : creates a bare repository on the remote. 
+
+# Your SSH username
+GITUSER='username'
+# Your SSH-accessible remote
+GITSERVER='git.server.com'
+
+# Interact with your remote servers. Things like "clone" can be done the traditional way.
+alias git-private-ls="ssh ${GITUSER}@${GITSERVER} 'cd git; ls;'"
+alias git-private-init="ssh ${GITUSER}@${GITSERVER} 'cd git; git init --bare $1'"
+

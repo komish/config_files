@@ -1,0 +1,6 @@
+#####
+##### Generic Aliases.
+#####
+alias ll='ls -lhG'
+alias ls='ls -hG'
+
