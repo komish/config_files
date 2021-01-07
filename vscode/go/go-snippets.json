@@ -1,0 +1,42 @@
+{
+	// For use when writing tests with the Ginkgo framework.
+	// Enables <TAB> completion to move the cursor from the required label
+	// (e.g. Context, It, etc.), the description string, and the closure.
+	"Add a ginkgo test block": {
+		"prefix": "gkg",
+		"body": [
+			"${1:Context}(\"$2\", func() {$3})"
+		],
+		"description": "Insert a Ginkgo test block function"
+	}
+	// For use when writing custom GomegaMatchers. The snippet will insert an
+	// type definition that you define, an accessor method that is exported on <TAB> completion,
+	// and scaffold the necessary methods to fulfill the GomegaMatcher interface.
+	"Add a gomega matcher": {
+		"prefix": "gmtch",
+		"body": [
+			"// ${1/(.*)/${1:/capitalize}/} is...",
+			"func ${1/(.*)/${1:/capitalize}/}() types.GomegaMatcher {",
+			"\treturn &${1}Matcher{}",
+			"}",
+			"",
+			"type ${1:yourAssertion}Matcher struct{}",
+			"",
+			"func (matcher *${1}Matcher) Match(actual interface{}) (bool, error) {",
+			"\t// your code here",
+			"\treturn false, nil",
+			"}",
+			"",
+			"func (matcher *${1}Matcher) FailureMessage(actual interface{}) string {",
+			"\t// your code here",
+			"\treturn \"\"",
+			"}",
+			"",
+			"func (matcher *${1}Matcher) NegatedFailureMessage(actual interface{}) string {",
+			"\t// your code here",
+			"\treturn \"\"",
+			"}"
+		],
+        "description": "Create a new GomegaMatcher type definition, an accessor, and the necessary methods to fulfill the interface"
+	}
+}
