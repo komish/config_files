@@ -1,0 +1,26 @@
+=========================================================================
+Source
+=========================================================================
+OpenFontlibrary ( https://fontlibrary.org )
+Google Fonts    ( https://fonts.google.com/ )
+
+=========================================================================
+Fonts
+=========================================================================
+JetBrains Mono  ( https://www.jetbrains.com/lp/mono/ )
+Input           ( https://input.fontbureau.com/download/ )
+Anonymous Pro   ( http://www.marksimonson.com/fonts/view/anonymous-pro )
+Source Code Pro ( http://blog.typekit.com/2012/09/24/source-code-pro/ )
+Cousine         ( https://fonts.google.com/specimen/Cousine )
+Ubuntu Mono     ( http://font.ubuntu.com/ )
+Hack            ( http://sourcefoundry.org/hack/ )
+Fantasque-Sans  ( https://github.com/belluzj/fantasque-sans )
+Iosevka         ( https://github.com/be5invis/Iosevka )
+IBM Plex        ( https://github.com/IBM/type )
+Overpass        ( https://github.com/RedHatBrand/Overpass )
+Space Mono      ( https://fonts.google.com/specimen/Space+Mono )
+Undefined       ( https://github.com/andirueckel/undefined-medium )
+Fira Mono       ( https://fonts.google.com/specimen/Fira+Mono )
+Oxygen Mono     ( https://fonts.google.com/specimen/Oxygen-Mono )
+Go Mono         ( https://github.com/golang/image/tree/master/font/gofont/ttfs )
+Victor Mono     ( https://rubjo.github.io/victor-mono )
