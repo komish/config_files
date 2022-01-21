@@ -1,6 +1,7 @@
 =========================================================================
 Fonts
 =========================================================================
+Iosevka         ( https://typeof.net/Iosevka/ )
 Azeret Mono     ( https://fonts.google.com/specimen/Azeret+Mono )
 JetBrains Mono  ( https://www.jetbrains.com/lp/mono/ )
 Comic Mono      ( https://github.com/dtinth/comic-mono-font )
