@@ -1,9 +1,11 @@
 =========================================================================
 Fonts
 =========================================================================
-Iosevka         ( https://typeof.net/Iosevka/ )
-Azeret Mono     ( https://fonts.google.com/specimen/Azeret+Mono )
-JetBrains Mono  ( https://www.jetbrains.com/lp/mono/ )
-Comic Mono      ( https://github.com/dtinth/comic-mono-font )
-Input Mono      ( https://input.fontbureau.com/download/ )
-Cousine         ( https://fonts.google.com/specimen/Cousine )
+CommitMono          ( https://commitmono.com/ )
+Cascadia Code/Mono  ( https://github.com/microsoft/cascadia-code )
+Maple Mono          ( https://github.com/subframe7536/maple-font )
+Iosevka             ( https://typeof.net/Iosevka/ )
+JetBrains Mono      ( https://www.jetbrains.com/lp/mono/ )
+Comic Mono          ( https://github.com/dtinth/comic-mono-font )
+Input Mono          ( https://input.fontbureau.com/download/ )
+Cousine             ( https://fonts.google.com/specimen/Cousine )  
