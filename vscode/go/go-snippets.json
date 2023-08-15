@@ -39,4 +39,62 @@
 		],
         "description": "Create a new GomegaMatcher type definition, an accessor, and the necessary methods to fulfill the interface"
 	}
+	"Create BubbleTea Model": {
+		"prefix": "teamodel",
+		"body": [
+			"func New() *${1:model} {",
+			"\treturn &${1:model}{}",
+			"}",
+			"",
+			"// Ensure that model implements the tea.Model interface.",
+			"var _ tea.Model = &${1:model}{}",
+			"",
+			"type ${1:model} struct {}",
+			"",
+			"func (m *${1:model}) Init() tea.Cmd {",
+			"\treturn nil",
+			"}",
+			"",
+			"func (m *${1:model}) Update(msg tea.Msg) (tea.Model, tea.Cmd) {",
+			"\tswitch msg.(type) {",
+			"\tcase tea.KeyMsg:",
+			"\t\treturn m, tea.Quit",
+			"\t}",
+			"\treturn m, nil",
+			"}",
+			"",
+			"func (m *${1:model}) View() string {",
+			"\treturn \"placeholder\"",
+			"}"
+		],
+		"description": "Creates a bubble tea model with Init, Update, and View methods."
+	},
+	"Create Tea Command and Message": {
+		"prefix": "teamsg",
+		"description": "Creates a tea command that takes no data, and a corresponding message",
+		"body": [
+			"// Msg${1} instructs the model... TODO",
+			"type Msg${1} struct{}",
+			"",
+			"// Cmd${1} emits the ${1} message.",
+			"func Cmd${1}() tea.Msg { return Msg${1}{} }",
+		]
+	},
+	"Create Tea Command and Message containing data": {
+		"prefix": "teamsgwithdata",
+		"description": "Creates a tea command that takes data, and a corresponding message",
+		"body": [
+			"// Msg${1} instructs the mode ${2:... TODO}",
+			"type Msg${1} struct{",
+			"\t${3:data} ${4:string}",	
+			"}",
+			"",
+			"// Cmd${1} emits the ${1} message.",
+			"func Cmd${1}(d ${4:string}) tea.Msg {",
+			"\treturn Msg${1}{",
+			"\t\t${3:data}: d,",
+			"\t}",
+			"}",
+		]
+	}
 }
